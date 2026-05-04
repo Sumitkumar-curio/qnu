@@ -1,24 +1,29 @@
-/* === Sumit — appraisal / work summary page (quantum + classic) === */
+/* === Sumit — appraisal page (QnuLabs-inspired black + orange) === */
 :root {
-  --bg: #0a0c14;
-  --bg-deep: #05060c;
-  --card: rgba(12, 18, 34, 0.94);
-  --border: rgba(139, 92, 246, 0.22);
-  --text: #f0f4ff;
-  --muted: rgba(224, 231, 255, 0.72);
-  /* Classic gold + quantum cyan / violet */
-  --accent: #c6a24a;
-  --accent-soft: rgba(198, 162, 74, 0.35);
-  --quantum: #5eead4;
-  --quantum-dim: rgba(94, 234, 212, 0.14);
-  --ion: #a78bfa;
-  --ion-dim: rgba(167, 139, 250, 0.2);
+  /* Aligned with qnulabs.com: near-black base + #f06649 family */
+  --bg: #0a0a0a;
+  --bg-deep: #050404;
+  --card: rgba(18, 18, 18, 0.96);
+  --border: rgba(240, 102, 73, 0.22);
+  --text: #f8fafc;
+  --muted: rgba(248, 250, 252, 0.72);
+  --accent: #f06649;
+  --accent-hot: #ff6021;
+  --accent-soft: rgba(240, 102, 73, 0.32);
+  --accent-dim: rgba(240, 102, 73, 0.12);
+  --accent-warm: #fa9078;
+  --accent-warm-dim: rgba(250, 144, 120, 0.18);
+  /* Legacy names used across rules — map to orange family */
+  --quantum: var(--accent);
+  --quantum-dim: var(--accent-dim);
+  --ion: var(--accent-warm);
+  --ion-dim: var(--accent-warm-dim);
   --radius: 12px;
   --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --font-display: "Cormorant Garamond", "Palatino Linotype", Palatino, serif;
   --page-max: min(1680px, 100%);
   --page-pad: clamp(0.5rem, 2vw, 1.75rem);
-  --gallery-min-h: clamp(300px, 42vw, 580px);
+  --gallery-min-h: clamp(420px, 52vmin, 920px);
 }
 
 *,
@@ -42,16 +47,16 @@ body {
   min-height: 100vh;
 }
 
-/* Quantum lab backdrop: soft nebula + faint interference grid */
-body.theme-quantum {
+/* QnuLabs-style backdrop: black base + soft orange glow + subtle grid */
+body.theme-qnu {
   background-color: var(--bg-deep);
   background-image:
-    radial-gradient(ellipse 120% 70% at 50% -20%, rgba(88, 28, 135, 0.38) 0%, transparent 52%),
-    radial-gradient(ellipse 55% 45% at 100% 30%, rgba(94, 234, 212, 0.07) 0%, transparent 50%),
-    radial-gradient(ellipse 45% 40% at 0% 85%, rgba(198, 162, 74, 0.08) 0%, transparent 48%),
-    linear-gradient(rgba(167, 139, 250, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(94, 234, 212, 0.035) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+    radial-gradient(ellipse 120% 65% at 50% -18%, rgba(240, 102, 73, 0.2) 0%, transparent 52%),
+    radial-gradient(ellipse 55% 45% at 100% 28%, rgba(255, 96, 33, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 42% 38% at 0% 88%, rgba(250, 144, 120, 0.06) 0%, transparent 48%),
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 52px 52px, 52px 52px;
   background-attachment: fixed;
 }
 
@@ -88,12 +93,12 @@ body.theme-quantum {
   position: sticky;
   top: 1rem;
   padding: 1.25rem;
-  background: linear-gradient(165deg, rgba(18, 24, 44, 0.98) 0%, rgba(8, 10, 20, 0.96) 100%);
-  border: 1px solid rgba(198, 162, 74, 0.22);
+  background: linear-gradient(165deg, rgba(28, 24, 22, 0.98) 0%, rgba(10, 9, 8, 0.97) 100%);
+  border: 1px solid rgba(240, 102, 73, 0.28);
   border-radius: var(--radius);
   box-shadow:
-    0 0 0 1px rgba(94, 234, 212, 0.06),
-    0 16px 48px rgba(0, 0, 0, 0.45);
+    0 0 0 1px rgba(255, 96, 33, 0.08),
+    0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar-photo {
@@ -105,8 +110,8 @@ body.theme-quantum {
   object-fit: contain;
   object-position: center;
   background: #0a0e14;
-  border: 2px solid rgba(198, 162, 74, 0.55);
-  box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.15), 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(240, 102, 73, 0.55);
+  box-shadow: 0 0 0 1px rgba(255, 96, 33, 0.12), 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 .sidebar-name {
@@ -207,8 +212,8 @@ body.theme-quantum {
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   background: rgba(12, 18, 34, 0.65);
-  border: 1px solid rgba(198, 162, 74, 0.28);
-  color: rgba(240, 244, 255, 0.92);
+  border: 1px solid rgba(240, 102, 73, 0.35);
+  color: rgba(248, 250, 252, 0.94);
 }
 
 /* Jump links */
@@ -230,8 +235,8 @@ body.theme-quantum {
 }
 .nav a:hover {
   color: var(--text);
-  border-color: rgba(94, 234, 212, 0.35);
-  background: var(--quantum-dim);
+  border-color: rgba(255, 96, 33, 0.4);
+  background: var(--accent-dim);
 }
 
 .section-title {
@@ -242,7 +247,7 @@ body.theme-quantum {
   letter-spacing: 0.03em;
   color: #faf8f2;
   border-bottom: none;
-  background-image: linear-gradient(90deg, var(--accent), var(--ion), var(--quantum));
+  background-image: linear-gradient(90deg, var(--accent-hot), var(--accent), var(--accent-warm));
   background-size: 100% 2px;
   background-repeat: no-repeat;
   background-position: 0 100%;
@@ -259,20 +264,20 @@ body.theme-quantum {
 .project {
   margin-bottom: 1.75rem;
   padding: clamp(1.1rem, 2vw, 1.75rem) clamp(1rem, 2.5vw, 2rem);
-  background: linear-gradient(180deg, rgba(16, 22, 40, 0.97) 0%, rgba(8, 11, 22, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(26, 22, 20, 0.98) 0%, rgba(10, 9, 8, 0.96) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: 0 10px 36px rgba(0, 0, 0, 0.32);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .project:hover {
-  border-color: rgba(94, 234, 212, 0.28);
-  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.38);
+  border-color: rgba(240, 102, 73, 0.38);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.42);
 }
 
 .project--highlight {
-  border-color: rgba(167, 139, 250, 0.42);
-  box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.08), 0 12px 40px rgba(67, 56, 120, 0.25);
+  border-color: rgba(255, 96, 33, 0.45);
+  box-shadow: 0 0 0 1px rgba(240, 102, 73, 0.12), 0 12px 40px rgba(120, 40, 20, 0.22);
 }
 
 .project h2 {
@@ -296,46 +301,39 @@ body.theme-quantum {
   color: rgba(238, 244, 255, 0.92);
 }
 
-/* Always 2 columns — large, easy to see */
+/* One screenshot per row — full content width so labels and UI text stay readable */
 .gallery,
 .gallery--4 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.65rem, 1.8vw, 1.25rem);
-  margin-bottom: 1.25rem;
+  grid-template-columns: 1fr;
+  gap: clamp(0.85rem, 2vw, 1.35rem);
+  margin-bottom: 1.5rem;
 }
 
-/* Third (or fifth…) image alone on last row: centred, same width as one column */
-.gallery figure:last-child:nth-child(odd):not(:only-child) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(100%, calc(50% - 0.5 * clamp(0.65rem, 1.8vw, 1.25rem)));
-}
-
-/* Same-size tiles; image scaled down to fit entirely (no crop) */
 .gallery figure {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  aspect-ratio: 4 / 3;
   min-height: var(--gallery-min-h);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: auto;
   border: 1px solid var(--border);
   background: #0a0e14;
-  padding: 0.35rem;
+  padding: clamp(0.4rem, 1vw, 0.65rem);
   box-sizing: border-box;
 }
+
 .gallery img {
-  max-width: 100%;
-  max-height: 100%;
+  display: block;
   width: auto;
+  max-width: 100%;
   height: auto;
+  max-height: min(88vh, 1100px);
+  margin-inline: auto;
   object-fit: contain;
   object-position: center;
-  display: block;
 }
 
 .bullets {
@@ -361,8 +359,8 @@ body.theme-quantum {
 .panel {
   margin: 1.5rem 0;
   padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2.5vw, 2rem);
-  background: linear-gradient(165deg, rgba(16, 22, 40, 0.95) 0%, rgba(8, 10, 20, 0.92) 100%);
-  border: 1px solid rgba(198, 162, 74, 0.15);
+  background: linear-gradient(165deg, rgba(28, 24, 22, 0.96) 0%, rgba(12, 10, 9, 0.93) 100%);
+  border: 1px solid rgba(240, 102, 73, 0.2);
   border-radius: var(--radius);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
@@ -436,7 +434,7 @@ body.theme-quantum {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
   font-style: italic;
   font-weight: 500;
-  color: rgba(167, 139, 250, 0.85);
+  color: rgba(250, 144, 120, 0.92);
   letter-spacing: 0.04em;
 }
 
@@ -460,14 +458,14 @@ body.theme-quantum {
 .skill-column {
   padding: clamp(1rem, 2vw, 1.35rem);
   border-radius: var(--radius);
-  background: linear-gradient(155deg, rgba(14, 20, 38, 0.92) 0%, rgba(6, 8, 18, 0.94) 100%);
-  border: 1px solid rgba(198, 162, 74, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 12px 40px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(155deg, rgba(30, 24, 22, 0.94) 0%, rgba(10, 9, 8, 0.96) 100%);
+  border: 1px solid rgba(240, 102, 73, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 12px 40px rgba(0, 0, 0, 0.32);
 }
 
 .skill-column--future {
-  border-color: rgba(94, 234, 212, 0.2);
-  box-shadow: inset 0 1px 0 rgba(94, 234, 212, 0.06), 0 12px 40px rgba(0, 0, 0, 0.28);
+  border-color: rgba(255, 96, 33, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255, 96, 33, 0.06), 0 12px 40px rgba(0, 0, 0, 0.32);
 }
 
 .skill-column__title {
@@ -525,17 +523,17 @@ button.skill-tile {
   min-height: 5.5rem;
   padding: 0.85rem 1rem;
   border-radius: 10px;
-  background: linear-gradient(148deg, rgba(26, 34, 58, 0.98) 0%, rgba(10, 14, 28, 0.96) 100%);
-  border: 1px solid rgba(167, 139, 250, 0.28);
+  background: linear-gradient(148deg, rgba(36, 28, 26, 0.98) 0%, rgba(12, 10, 9, 0.97) 100%);
+  border: 1px solid rgba(240, 102, 73, 0.32);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.05) inset,
-    0 14px 32px rgba(0, 0, 0, 0.42),
-    0 0 0 1px rgba(0, 0, 0, 0.25);
+    0 14px 32px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 0, 0, 0.3);
   transition: border-color 0.3s ease, box-shadow 0.35s ease;
 }
 
 .skill-tile--future .skill-tile__face {
-  border-color: rgba(94, 234, 212, 0.22);
+  border-color: rgba(255, 96, 33, 0.28);
 }
 
 .skill-tile__name {
@@ -564,15 +562,15 @@ button.skill-tile {
 
 .skill-tile:hover .skill-tile__face,
 .skill-tile:focus-visible .skill-tile__face {
-  border-color: rgba(94, 234, 212, 0.45);
+  border-color: rgba(255, 96, 33, 0.55);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.07) inset,
-    0 22px 48px rgba(0, 0, 0, 0.5),
-    0 0 28px rgba(94, 234, 212, 0.12);
+    0 22px 48px rgba(0, 0, 0, 0.52),
+    0 0 28px rgba(240, 102, 73, 0.18);
 }
 
 .skill-tile:focus-visible .skill-tile__face {
-  outline: 2px solid var(--quantum);
+  outline: 2px solid var(--accent-hot);
   outline-offset: 2px;
 }
 
@@ -701,8 +699,8 @@ button.skill-tile {
   align-items: center;
   padding: 1rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.07) 0%, rgba(167, 139, 250, 0.06) 100%);
-  border: 1px solid rgba(198, 162, 74, 0.2);
+  background: linear-gradient(135deg, rgba(240, 102, 73, 0.1) 0%, rgba(255, 96, 33, 0.06) 100%);
+  border: 1px solid rgba(240, 102, 73, 0.28);
 }
 .strip figure {
   margin: 0;
@@ -769,13 +767,88 @@ footer {
   color: var(--muted);
 }
 
+/* Click project / gallery / team photos to view full screen */
+main figure img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.lightbox::backdrop {
+  background: rgba(5, 4, 4, 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox__shell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  min-width: 100%;
+  padding: clamp(0.75rem, 3vw, 2rem);
+  box-sizing: border-box;
+  cursor: zoom-out;
+}
+
+.lightbox__img {
+  max-width: min(100%, calc(100vw - 2 * clamp(0.75rem, 3vw, 2rem)));
+  max-height: min(92dvh, calc(100dvh - 2 * clamp(0.75rem, 3vw, 2rem)));
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  cursor: default;
+  border-radius: 10px;
+  box-shadow:
+    0 12px 60px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(240, 102, 73, 0.3);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: clamp(0.65rem, 2vw, 1.25rem);
+  right: clamp(0.65rem, 2vw, 1.25rem);
+  z-index: 1;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #ffffff;
+  background: rgba(12, 10, 9, 0.92);
+  border: 1px solid rgba(240, 102, 73, 0.55);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.lightbox__close:hover {
+  background: rgba(28, 22, 20, 0.96);
+  border-color: rgba(255, 96, 33, 0.75);
+}
+
 @media (max-width: 860px) {
   .app-layout {
     grid-template-columns: 1fr;
     max-width: 100%;
   }
   :root {
-    --gallery-min-h: clamp(220px, 52vw, 400px);
+    --gallery-min-h: clamp(300px, 48vh, 720px);
   }
   .sidebar-inner {
     position: relative;
