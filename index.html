@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumit Kumar — Work summary for review</title>
+    <meta
+      name="description"
+      content="Sumit Kumar: TROPOS 2.0, SAG validation, drone platform, CVQRNG, Freespace QKD, quantum systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-quantum">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="app-layout">
+      <aside aria-label="Profile">
+        <div class="sidebar-inner">
+          <img
+            class="sidebar-photo"
+            src="PICS/Profile_pic.jpeg"
+            alt="Sumit Kumar"
+            width="400"
+            height="400"
+            loading="eager"
+          />
+          <p class="sidebar-name">Sumit Kumar</p>
+          <ul class="sidebar-creds">
+            <li>
+              <strong>M.Tech</strong>, IIT Jodhpur — Quantum Technologies<br />
+              <span class="cred-sub">Specialization: Quantum Computing</span>
+            </li>
+            <li><strong>B.Tech</strong> — Computer Science &amp; Engineering</li>
+            <li><strong>Accenture</strong> <span class="cred-years">2021–2022</span></li>
+            <li><strong>QnuLabs</strong> <span class="cred-years">2025-Present</span></li>
+            
+          </ul>
+          <p class="sidebar-note">Review period: May 2025 — May 2026</p>
+        </div>
+      </aside>
+
+      <div class="layout-main">
+        <header class="hero">
+          <p class="hero-badge">Work summary for review</p>
+          <h1>What I worked on</h1>
+          <p class="hero-lead">
+            I contribute across <strong>TROPOS 2.0</strong>, <strong>SAG VALIDATION</strong>, the <strong>drone</strong>
+            software stack, <strong>CVQRNG</strong> and <strong>FREESPACE QKD</strong> (stack, GUI, and alignment
+            tooling), plus supporting threads in CVQKD and magnetometry. The sections below follow that priority order,
+            with screenshots and highlights for each initiative.
+          </p>
+          <div class="hero-meta">
+            <span class="chip">Quantum communications · sensing · autonomy</span>
+            <span class="chip">May 2025 — May 2026</span>
+          </div>
+        </header>
+
+        <nav class="nav" aria-label="Jump to section">
+          <a href="#tropos">TROPOS 2.0</a>
+          <a href="#sag">SAG VALIDATION</a>
+          <a href="#drone">DRONE</a>
+          <a href="#cvqrng">CVQRNG</a>
+          <a href="#freespace">FREESPACE QKD</a>
+          <a href="#cvqkd">CVQKD</a>
+          <a href="#mag">Magnetometer</a>
+          <a href="#sparq">SPARQ</a>
+          <a href="#future">Future ideas</a>
+          <a href="#powers">Skills</a>
+          <a href="#extra">Beyond work</a>
+          <a href="#activities">Activities</a>
+        </nav>
+
+        <main id="main">
+          <h2 class="section-title" id="projects">Projects</h2>
+
+          <!-- 01 TROPOS 2.0 -->
+          <article id="tropos" class="project">
+            <h2>01 — TROPOS 2.0</h2>
+            <p class="sub">Tropospheric / platform programme — GUI and system-side tooling.</p>
+            <p class="work-summary">
+              Worked on GUI modules and system-side improvements to make TROPOS data easier to monitor and debug during
+              testing. Contributed to fixing issues related to system visibility and stability. Helped improve usability
+              during internal demos and testing cycles.
+            </p>
+            <div class="gallery">
+              <figure><img src="Screenshot_Projects/TROPOS2.0_GUI.png" alt="TROPOS 2.0 GUI" loading="lazy" /></figure>
+              <!-- <figure><img src="Screenshot_Projects/HBT_TEST.png" alt="Lab or test context" loading="lazy" /></figure> -->
+              <!-- <figure>
+                <img src="Screenshot_Projects/Screenshot%20from%202026-04-23%2011-34-07.png" alt="Supporting screenshot" loading="lazy" />
+              </figure> -->
+            </div>
+            <ul class="bullets">
+              <li><strong>GUI &amp; system:</strong> Modules and improvements for monitoring and debugging during tests.</li>
+              <li><strong>Stability:</strong> Contributions to visibility and stability-related fixes.</li>
+              <li><strong>Usability:</strong> Clearer experience for internal demos and test cycles.</li>
+            </ul>
+          </article>
+
+          <!-- 02 SAG VALIDATION -->
+          <article id="sag" class="project">
+            <h2>02 — SAG VALIDATION</h2>
+            <p class="sub">Strapdown inertial navigation · alignment · gyro validation.</p>
+            <p class="work-summary">
+              Supported SAG validation through testing, data observation, and debugging across different scenarios. Assisted
+              in identifying inconsistencies and verifying system outputs against expected behavior. Contributions helped in
+              improving confidence during validation and testing phases.
+            </p>
+            <div class="gallery">
+              <figure><img src="Screenshot_Projects/HBT_TEST.png" alt="Lab or test context" loading="lazy" /></figure>
+              <figure><img src="PICS/SAG_TEAM.jpeg" alt="SAG team" loading="lazy" /></figure>
+              <!-- <figure><img src="Screenshot_Projects/HBT_TEST.png" alt="Test setup" loading="lazy" /></figure>
+              <figure>
+                <img src="Screenshot_Projects/Screenshot%20from%202026-04-23%2011-34-07.png" alt="Instrumentation or GUI" loading="lazy" />
+              </figure> -->
+            </div>
+            <ul class="bullets">
+              <li><strong>Testing &amp; observation:</strong> Hands-on support across scenarios, data checks, and debugging.</li>
+              <li><strong>Consistency:</strong> Helped spot inconsistencies and compare outputs to expected behavior.</li>
+              <li><strong>Confidence:</strong> Stronger sign-off posture during validation and test phases.</li>
+            </ul>
+          </article>
+
+          <!-- 03 Drone -->
+          <article id="drone" class="project project--highlight">
+            <h2>03 — DRONE</h2>
+            <p class="sub">Authentication · latency · testing · gimbal + Xbox + 2D map simulator</p>
+            <p class="work-summary">
+              On the drone stack I focused on unblockers and operator-facing integration: fixing a stuck authentication
+              path, improving latency on the flows I influenced, and staying close to testing. I also built a practical
+              rehearsal setup: gimbal motion from an Xbox controller together with vehicle motion on a 2D map in the
+              simulator for demos and training. That setup made rehearsals and structured test runs easier to run
+              end-to-end.
+            </p>
+            <div class="gallery">
+              <figure>
+                <img src="Screenshot_Projects/drone1.jpeg" alt="Simulator or UI" loading="lazy" />
+              </figure>
+              <figure>
+                <img src="Screenshot_Projects/drone2.jpeg" alt="Simulator or UI" loading="lazy" />
+              </figure>
+              <!-- <figure><img src="untitled_diagram.png" alt="Diagram" loading="lazy" /></figure>
+              <figure><img src="Screenshot_Projects/GNU_RADIO.jpeg" alt="Comms context" loading="lazy" /></figure>
+              <figure><img src="Screenshot_Projects/HBT_TEST.png" alt="Bench test" loading="lazy" /></figure> -->
+            </div>
+            <ul class="bullets">
+              <li><strong>Auth:</strong> Unblocked a major authentication issue so the stack could progress again.</li>
+              <li><strong>Latency:</strong> Contributed to measurable latency improvements on the flows exercised in our test plan.</li>
+              <li><strong>Testing:</strong> Strong involvement in test cycles, defect isolation, and sign-off support.</li>
+              <li>
+                <strong>Simulator:</strong> Gimbal + Xbox controller + drone motion on a <strong>2D map</strong> for rehearsal and demos.
+              </li>
+            </ul>
+          </article>
+
+          <!-- 04 CVQRNG -->
+          <article id="cvqrng" class="project">
+            <h2>04 — CVQRNG</h2>
+            <p class="sub">Continuous-variable quantum random number generation — stack &amp; GUI</p>
+            <p class="work-summary">
+              Worked on CVQRNG stack and GUI to make the system easier to operate and monitor in real time. Contributed to
+              randomness validation workflows using NIST tests and handled large datasets. Improved system usability for
+              testing and demo purposes.
+            </p>
+           <div class="gallery">
+              <!-- <figure><img src="Screenshot_Projects/NITK_RANDOMNESS_TOOL.png" alt="Randomness tool" loading="lazy" /></figure> -->
+              <figure><img src="Screenshot_Projects/QRNG_Data.png" alt="QRNG Data" loading="lazy" /></figure>
+              <!-- <figure><img src="Screenshot_Projects/HBT_TEST.png" alt="HBT test" loading="lazy" /></figure> -->
+            </div> 
+            <ul class="bullets">
+              <li><strong>Stack &amp; GUI:</strong> Real-time operation and monitoring for lab and demo use.</li>
+              <li><strong>Validation:</strong> NIST-based randomness checks and large-dataset handling.</li>
+              <li><strong>Usability:</strong> Smoother workflows for testing and demonstrations.</li>
+            </ul>
+          </article>
+
+          <!-- 05 FREESPACE QKD -->
+          <article id="freespace" class="project">
+            <h2>05 — FREESPACE QKD</h2>
+            <p class="sub">Optical link · Xbox gimbal for alignment · stack &amp; GUI</p>
+            <p class="work-summary">
+              Contributed to freespace QKD stack and GUI development with focus on alignment and operability. Built
+              Xbox-based gimbal control to simplify optical alignment during testing. Helped improve practical usability of
+              the system in lab/demo setups.
+            </p>
+            <div class="gallery">
+              <figure><img src="Screenshot_Projects/Free_Space_UI.png" alt="Freespace QKD GUI" loading="lazy" /></figure>
+            </div>
+            <ul class="bullets">
+              <li><strong>Stack &amp; GUI:</strong> Alignment and operability for lab and demo contexts.</li>
+              <li><strong>Gimbal (Xbox):</strong> Controller-driven alignment to speed up optical setup during tests.</li>
+              <li><strong>Outcome:</strong> More practical day-to-day use of the terminal in the lab.</li>
+            </ul>
+          </article>
+
+          <h2 class="section-title" id="other-work">Other technical threads</h2>
+          <p class="section-note">Supporting work — still important to capture for a full picture.</p>
+
+          <!-- 06 CVQKD -->
+          <article id="cvqkd" class="project">
+            <h2>06 — CVQKD</h2>
+            <p class="sub">Continuous-variable quantum key distribution</p>
+            <p class="work-summary">
+              Worked on CV-QKD system understanding, including signal processing and basic architecture. Contributed to
+              visualization (FFT, QPSK) and initial integration efforts. Gained hands-on experience connecting theory with
+              system-level implementation.
+            </p>
+            <div class="gallery">
+              <figure>
+                <img src="Screenshot_Projects/Screenshot%20from%202026-04-23%2011-34-07.png" alt="Screenshot" loading="lazy" />
+              </figure>
+              <!-- <figure><img src="Screenshot_Projects/cvqkd_3_feature_initial%20architecture.jpeg" alt="CVQKD architecture" loading="lazy" /></figure> -->
+              <figure><img src="Screenshot_Projects/SWADESH_CVQKD_SIMULATTION.png" alt="CVQKD simulation" loading="lazy" /></figure>
+              
+              <!-- <figure><img src="Screenshot_Projects/GNU_RADIO.jpeg" alt="GNU Radio" loading="lazy" /></figure> -->
+            </div>
+            <ul class="bullets">
+              <li><strong>Understanding:</strong> Signal path, processing, and high-level architecture.</li>
+              <li><strong>Visualization:</strong> FFT and QPSK views to support analysis and integration.</li>
+              <li><strong>Bridge:</strong> Linking concepts to runnable system pieces.</li>
+            </ul>
+          </article>
+
+          <!-- 07 Magnetometer -->
+          <article id="mag" class="project">
+            <h2>07 — Magnetometer</h2>
+            <p class="sub">Magnetic sensing / calibration / fusion</p>
+            <p class="work-summary">
+              Worked on magnetometer data visualization and basic analysis through GUI tools. Helped in observing sensor
+              behavior and improving data readability. Supported testing and validation through plots and real-time
+              monitoring.
+            </p>
+            <div class="gallery">
+              <figure><img src="Screenshot_Projects/MAGNETOMETER.png" alt="Magnetometer" loading="lazy" /></figure>
+              <!-- <figure><img src="Screenshot_Projects/HBT_TEST.png" alt="Test" loading="lazy" /></figure>
+              <figure>
+                <img src="Screenshot_Projects/Screenshot%20from%202026-04-23%2011-34-07.png" alt="Screenshot" loading="lazy" />
+              </figure> -->
+            </div>
+            <ul class="bullets">
+              <li><strong>GUI &amp; plots:</strong> Clearer views of sensor data for quick interpretation.</li>
+              <li><strong>Observation:</strong> Easier read on behavior during experiments.</li>
+              <li><strong>Testing:</strong> Real-time monitoring to back validation runs.</li>
+            </ul>
+          </article>
+
+          <!-- 08 SPARQ -->
+          <article id="sparq" class="project">
+            <h2>08 — SPARQ</h2>
+            <p class="sub">Ideas · direction · mentoring around simulators and quantum applications</p>
+            <p class="work-summary">
+              Contributed ideas and helped define directions for topics within SPARQ. Supported others through discussions
+              and basic mentoring. Helped in shaping practical approaches around simulators and quantum system applications.
+            </p>
+            <div class="gallery">
+              <!-- <figure><img src="PICS/Softwar_team.jpeg" alt="Software team" loading="lazy" /></figure> -->
+              <!-- <figure><img src="PICS/TEAM_DINNER.jpeg" alt="Team dinner" loading="lazy" /></figure>
+              <figure><img src="PICS/Snacks.jpeg" alt="Team snacks" loading="lazy" /></figure> -->
+            </div>
+            <ul class="bullets">
+              <li><strong>Direction:</strong> Ideas and topic framing inside SPARQ.</li>
+              <li><strong>Mentoring:</strong> Discussions and light guidance for teammates.</li>
+              <li><strong>Practical focus:</strong> Simulators and how quantum systems show up in real tooling.</li>
+            </ul>
+          </article>
+
+          <h2 class="section-title" id="future">Future ideas (to pitch)</h2>
+          <div class="panel">
+            <div class="future-grid">
+              <ul>
+                <li><strong>More simulators:</strong> Reuse the drone / map pattern on other subsystems.</li>
+                <li><strong>QCCTV:</strong> Quantum-secured or quantum-aware monitoring concept.</li>
+                <li><strong>AI/ML on QRNG &amp; QKD:</strong> Health monitoring, anomaly detection — with clear trust boundaries.</li>
+                <li><strong>IoT security:</strong> Keys from QRNG/QKD for device identity and sessions.</li>
+              </ul>
+              <!-- <figure><img src="PICS/Chess.jpeg" alt="Strategy / forward thinking" loading="lazy" /></figure> -->
+            </div>
+          </div>
+
+          <section id="powers" class="powers-section skills-3d" aria-labelledby="powers-title">
+            <div class="powers-header">
+              <h2 class="section-title" id="powers-title">Skills &amp; direction</h2>
+              <p class="powers-tagline" aria-hidden="true">⟨&nbsp;superposition of craft &amp; curiosity&nbsp;⟩</p>
+            </div>
+            <p class="section-note">What I bring today — and where I am steering next. Hover or focus tiles for a 3D tilt.</p>
+
+            <div class="powers-grid powers-grid--3d">
+              <div class="skill-column">
+                <h3 class="skill-column__title">Current strengths</h3>
+                <div class="skill-deck">
+                  <button type="button" class="skill-tile">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Problem solver</span>
+                      <span class="skill-tile__desc">Breaking down blockers and driving issues to closure.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Quick delivery</span>
+                      <span class="skill-tile__desc">Shipping within agreed time frames without losing quality.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Cryptography</span>
+                      <span class="skill-tile__desc">Applied work for quantum-safe and keying contexts.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Full stack</span>
+                      <span class="skill-tile__desc">GUI and services through to lab and field integration.</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="skill-column skill-column--future">
+                <h3 class="skill-column__title">Future focus</h3>
+                <p class="skill-column__lead">Growing more toward:</p>
+                <div class="skill-deck skill-deck--dense">
+                  <button type="button" class="skill-tile skill-tile--future">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">QKD</span>
+                      <span class="skill-tile__desc">Deeper contribution on quantum key distribution systems.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile skill-tile--future">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Cryptography</span>
+                      <span class="skill-tile__desc">Protocols, proofs, and implementation in one thread.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile skill-tile--future">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Algorithms</span>
+                      <span class="skill-tile__desc">Design and analysis for quantum and classical pipelines.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile skill-tile--future">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Architecture</span>
+                      <span class="skill-tile__desc">End-to-end design across subsystems and teams.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile skill-tile--future">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">Full stack</span>
+                      <span class="skill-tile__desc">From protocol logic to operator experience.</span>
+                    </span>
+                  </button>
+                  <button type="button" class="skill-tile skill-tile--future">
+                    <span class="skill-tile__face">
+                      <span class="skill-tile__name">AI / ML</span>
+                      <span class="skill-tile__desc">Where it helps: monitoring, health, security — with clear trust boundaries.</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="extra-section" id="extra" aria-labelledby="extra-title">
+            <h2 class="section-title" id="extra-title">Beyond work</h2>
+            <p class="section-note">How I connect with colleagues outside day-to-day delivery.</p>
+            <p class="extra-intro">
+              A few snapshots — sport, shared meals, and team moments — that show balance and collaboration beyond the
+              lab screen.
+            </p>
+            <div class="extra-grid">
+              <article class="extra-card">
+                <figure>
+                  <img src="PICS/Chess.jpeg" alt="Chess at a team event" loading="lazy" />
+                </figure>
+                <div class="extra-copy">
+                  <h3 class="extra-card-title">Chess</h3>
+                  <p class="extra-card-blurb">Strategy and calm focus; friendly games with teammates.</p>
+                </div>
+              </article>
+              <article class="extra-card">
+                <figure>
+                  <img src="PICS/Cricket.jpeg" alt="Cricket outdoors" loading="lazy" />
+                </figure>
+                <div class="extra-copy">
+                  <h3 class="extra-card-title">Cricket</h3>
+                  <p class="extra-card-blurb">Weekend outdoor play — energy and team spirit.</p>
+                </div>
+              </article>
+              <article class="extra-card">
+                <figure>
+                  <img src="PICS/TEAM_BADMINTON.jpeg" alt="Team badminton" loading="lazy" />
+                </figure>
+                <div class="extra-copy">
+                  <h3 class="extra-card-title">Badminton</h3>
+                  <p class="extra-card-blurb">Courts with the wider group; quick rallies, good laughs.</p>
+                </div>
+              </article>
+              <article class="extra-card">
+                <figure>
+                  <img src="PICS/Snacks.jpeg" alt="Team snacks" loading="lazy" />
+                </figure>
+                <div class="extra-copy">
+                  <h3 class="extra-card-title">Team snacks</h3>
+                  <p class="extra-card-blurb">Light breaks between focused work blocks.</p>
+                </div>
+              </article>
+              <article class="extra-card">
+                <figure>
+                  <img src="PICS/TEAM_DINNER.jpeg" alt="Team dinner" loading="lazy" />
+                </figure>
+                <div class="extra-copy">
+                  <h3 class="extra-card-title">Team dinner</h3>
+                  <p class="extra-card-blurb">Team Party.</p>
+                </div>
+              </article>
+              <article class="extra-card">
+                <figure>
+                  <img src="PICS/Softwar_team.jpeg" alt="Software team group" loading="lazy" />
+                </figure>
+                <div class="extra-copy">
+                  <h3 class="extra-card-title">Software team</h3>
+                  <p class="extra-card-blurb">The faces behind builds, tests, and releases.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <h2 class="section-title" id="activities">Activities (cross-project)</h2>
+          <div class="act-grid">
+            <div class="act-card">
+              <h3>Build</h3>
+              <p>
+                TROPOS 2.0 GUI and system-side modules; SAG validation support; drone auth and latency; CVQRNG and
+                Freespace QKD stack/GUI.
+              </p>
+            </div>
+            <div class="act-card">
+              <h3>Test</h3>
+              <p>Hands-on testing and clear feedback across SAG, drone, and quantum stacks.</p>
+            </div>
+            <div class="act-card">
+              <h3>Controls &amp; sim</h3>
+              <p>Gimbal + Xbox; 2D map simulator; freespace alignment UX.</p>
+            </div>
+            <div class="act-card">
+              <h3>Mentoring</h3>
+              <p>SPARQ; future themes: simulators, QCCTV, AI/ML, IoT.</p>
+            </div>
+          </div>
+
+          <div class="strip">
+            <figure>
+              <img src="PICS/TEAM_DINNER.jpeg" alt="Team" loading="lazy" />
+            </figure>
+            <div class="text">
+              <h3>Summary for my manager</h3>
+              <p class="manager-line">
+                I deliver across <strong>TROPOS 2.0</strong>, <strong>SAG VALIDATION</strong>, and the <strong>drone</strong>
+                stack (auth, latency, testing, simulator), while owning <strong>CVQRNG</strong> and <strong>Freespace QKD</strong>
+                stack/GUI and Xbox gimbal alignment — I mentor in <strong>SPARQ</strong> and am lining up ideas on more
+                simulators, QCCTV, AI/ML on quantum links, and IoT hardening. 
+              </p>
+            </div>
+          </div>
+        </main>
+
+        <footer>
+          <p>Sumit Kumar — QnuLabs · Work summary, May 2025–May 2026</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
